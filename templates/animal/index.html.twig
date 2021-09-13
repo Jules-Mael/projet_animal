@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les animaux !{% endblock %}
+
+{% block body %}
+    <h1>Liste des animaux</h1>
+    {% for animal in animaux %}
+        <p> {{ animal.nom }} </p>
+    {% endfor %}
+{% endblock %}
