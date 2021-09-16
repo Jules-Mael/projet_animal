@@ -3,8 +3,10 @@
 {% block title %}Les animaux !{% endblock %}
 
 {% block body %}
-    <h1>Liste des animaux</h1>
+    <h1 class="text-center">Liste des animaux</h1>
     {% for animal in animaux %}
-        <p> {{ animal.nom }} </p>
+        <img src="{{ animal.image }}">
+        <p><a href="{{ path("app_animal_detail",{ uuid : animal.uuid }) }}">{{ animal.nom }}</a></p>
+        <p> {{ animal.description }} </p>
     {% endfor %}
 {% endblock %}

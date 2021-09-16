@@ -22,6 +22,7 @@ class AnimalFixtures extends Fixture
             $animal->setImage($faker->imageUrl(200,100,"animals"));
             $animal->setPoids($faker->numberBetween(1,100));
             $animal->setDangereux($faker->boolean(20));
+            $animal->setUuid($faker->uuid());
             $manager->persist($animal);
         }
         $manager->flush();
